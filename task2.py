@@ -12,7 +12,7 @@ def draw_pythagoras_tree(ax, x, y, angle, length, level):
 
     ax.plot([x, x_end], [y, y_end], color="brown", linewidth=max(1, level * 0.5))
 
-    new_length = length * 0.7
+    new_length = length * (np.sqrt(2) / 2)
     draw_pythagoras_tree(ax, x_end, y_end, angle + np.pi / 4, new_length, level - 1)
     draw_pythagoras_tree(ax, x_end, y_end, angle - np.pi / 4, new_length, level - 1)
 
