@@ -35,19 +35,6 @@ def generate_colors(n):
     return colors
 
 
-def collect_nodes(root):
-    """Collects all nodes for counting."""
-    nodes = []
-    stack = [root]
-    while stack:
-        node = stack.pop()
-        if node:
-            nodes.append(node)
-            stack.append(node.right)
-            stack.append(node.left)
-    return nodes
-
-
 def dfs_traversal(root):
     """Depth-first search using stack."""
     order = []
